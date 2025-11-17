@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-midnight font-body antialiased;
+}
+
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(120deg, #22D3EE, #7C3AED, #FB7185);
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.6;
+}
+
+.card-sheen {
+  background: radial-gradient(circle at 10% 20%, rgba(124,58,237,0.08), transparent 25%),
+    radial-gradient(circle at 90% 10%, rgba(34,211,238,0.08), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(251,113,133,0.12), transparent 30%);
+}
